@@ -9,10 +9,20 @@ console.log('authToken', authToken);
 
 const client = require('twilio')(accountSid, authToken);
 
-client.messages
-  .create({
-     body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
-     from: process.env.MY_PHONE_NUMBER,
-     to: '+8613821576650'
-   })
-  .then(message => console.log(message.sid));
+// client.messages
+//   .create({
+//      body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
+//      from: process.env.MY_PHONE_NUMBER,
+//      to: '+8618518251024'
+//    })
+//   .then(message => {
+//     console.log('print out message');
+//     console.log(message.sid)
+//   });
+
+  client.validationRequests
+    .create({
+      friendlyName: 'my phone number',
+      phoneNumber: process.env.MY_PHONE_NUMBER
+    })
+    .then(validation_request => console.log(validation_request.friendlyName));
