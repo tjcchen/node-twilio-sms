@@ -13,10 +13,9 @@ client.messages
   .create({
      body: 'This is a message from Andy Chen!',
      from: process.env.MY_PHONE_NUMBER,
-     to: '+8613821576650'
+     to: '+8618518251024'
    })
   .then(message => {
-    console.log('print out message sid');
     console.log(message.sid)
   });
 
