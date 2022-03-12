@@ -5,4 +5,4 @@ Adding a service to send twilio SMS to end users.
 https://www.twilio.com/
 
 ## License
-This project is licensed under the terms of the MIT License.
+This project is licensed under the terms of the Apache-2.0 License.
